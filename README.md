@@ -48,6 +48,7 @@ to set new state and publish it to global, you can add this in listener event of
 
  ```
  
- 
+ ## Notes
+Check my repository and clone, dont forget to `flutter run`
  ## Author
  Fajrul Aulia
