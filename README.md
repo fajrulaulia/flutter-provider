@@ -1,16 +1,53 @@
 # flutter_provider
 
-A new Flutter project.
+Simple flutter state management using Provider
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+add package in pusbec.yml, you can going to https://pub.dev/packages/provider/install
+``` yml
+dependencies:
+  provider: [Latest Version]
 
-A few resources to get you started if this is your first Flutter project:
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Usage
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+create and register provider, use this like boss
+``` dart
+import 'package:flutter/foundation.dart';
+
+class NameOfPrvider extends ChangeNotifier {
+  String _name;
+
+  void setNameString(String name) {
+    this._name = name;
+    notifyListeners();
+  }
+
+  String getNameString() {
+    return this._name;
+  }
+..........
+
+```
+
+to set new state and publish it to global, you can add this in listener event of widget.
+
+ ``` dart
+ context.read<DataProvider>().setNameString("Haii, this value will set on global");
+ ```
+ 
+ 
+ to get state, you wrapping use consumer or you can add this in iniState()
+ 
+ ``` dart
+   void initState() {
+    name= context.read<DataProvider>().getNameString();
+  }
+
+ ```
+ 
+ 
+ ## Author
+ Fajrul Aulia
