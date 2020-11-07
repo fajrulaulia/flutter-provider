@@ -2,6 +2,9 @@
 
 Simple flutter state management using Provider
 
+<img src="https://raw.githubusercontent.com/fajrulaulia/flutter-provider/master/playofoverview.gif"  height="700" />
+
+
 ## Installation
 
 add package in pusbec.yml, you can going to https://pub.dev/packages/provider/install
